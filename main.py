@@ -27,7 +27,7 @@ class BackupCopyPhoto:
         return res.json()
 
     def loader_large_photo(self, num):
-        """Метод скачивания фотографии самого большого размера"""
+        """Метод скачивания фотографии самого большого размер и сохранение данных в JSON"""
         name_photo = str(self.catch_json()['response']['items'][num]
                          ['likes']['count']) + '.jpg'
         way_to_photo = 'Photos/' + name_photo
