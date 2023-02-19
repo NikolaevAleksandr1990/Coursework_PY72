@@ -61,9 +61,9 @@ class BackupCopyPhoto:
                 photo.write(img_data)
             dictionary = {
                  "file_name": str(self.catch_json()['response']['items'][num]
-                                 ['likes']['count']) + '.jpg',
+                                  ['likes']['count']) + '.jpg',
                  "size": str(self.catch_json()['response']['items']
-                            [num]['sizes'][-1]['type'])
+                             [num]['sizes'][-1]['type'])
             }
             with open('photos.json', 'a', encoding='utf-8') as outfile:
                 json.dump(dictionary, outfile,  ensure_ascii=False, indent=2)
