@@ -88,7 +88,7 @@ class YaUploader:
         }
 
     def _get_upload_link(self, file_path):
-        """Метод cсылку для загрузки на яндекс диск"""
+        """Метод получения cсылки для загрузки на яндекс диск"""
         upload_url = 'https://cloud-api.yandex.net/v1/disk/resources/upload'
         headers = self.get_headers()
         params = {'path': file_path, 'overwrite': 'true'}
@@ -97,6 +97,7 @@ class YaUploader:
         return response.json()
 
     def create_folder(self, path):
+        """Метод создания новой папки на яндекс диске"""
         href = 'https://cloud-api.yandex.net/v1/disk/resources'
         headers = self.get_headers()
         headers['Accept'] = 'application/json'
